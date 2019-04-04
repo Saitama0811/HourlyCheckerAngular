@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col"></div>
+<div class="col">
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" formControlName="firstName" placeholder="Enter FirstName">
+      </div>
+      <div class="col">
+        <input type="text" class="form-control" formControlName="lastName" placeholder="Enter LastName"><br>
+      </div>
+    </div>
+    <input type="email" class="form-control" formControlName="email" placeholder="Enter Email"><br>
+    <input type="tel" class="form-control" formControlName="phoneNumber" placeholder="Enter Phone Number"><br>
+    <input type="text" class="form-control" formControlName="qualification" placeholder="Enter Qualification"><br>
+    <button type="submit" class="form-control btn btn-primary">Submit</button>
+  </form>
+</div>
+<div class="col"></div>
+</div>

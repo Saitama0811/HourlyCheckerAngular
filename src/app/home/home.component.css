@@ -1,0 +1,11 @@
+.statusok{
+    background-color: greenyellow;
+    border: 1px green solid;
+    border-radius: 15px;
+}
+
+.statusbad{
+    background-color: lightcoral;
+    border: 1px red solid;
+    border-radius: 15px;
+}

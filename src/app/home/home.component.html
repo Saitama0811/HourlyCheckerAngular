@@ -1,0 +1,21 @@
+<br>
+<div *ngIf="service.showError" class="statusok">
+  <br>
+  <h3 class="text-center">
+    Status: OK
+  </h3>
+  <br>
+</div>
+<br>
+<div *ngIf="!service.showError" class="statusbad">
+    <br>
+    <h3 class="text-center">
+      Status: Error
+    </h3>
+    <br>
+</div>
+<form class="text-center">
+  <br>
+  <button routerLink="/senddata" class="btn btn-primary">Enter Data</button><br><br>
+  <button (click)="onCheck()" class="btn btn-success">Force Check</button>
+</form>
