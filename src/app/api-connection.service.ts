@@ -11,9 +11,9 @@ import { CurrentDateTime } from './current-date-time';
 export class ApiConnectionService {
   public formData: FormData;
   public showError: boolean;
+  dateObj;
   public currentdatetime: CurrentDateTime;
   constructor(private http: HttpClient) {
-    this.showError = false;
    }
 
   onSubmit() {
@@ -21,7 +21,14 @@ export class ApiConnectionService {
     return result;
   }
 
-  onCheck() {
+  onCheck(curhour, curminute, curdate) {
+    this.dateObj = {
+      hours: curhour,
+      minutes: curminute,
+      date: curdate
+    };
+    this.currentdatetime = this.dateObj;
+    console.log(this.currentdatetime);
     const result = this.http.post(`https://localhost:44397/api/check`, this.currentdatetime);
     return result;
   }
